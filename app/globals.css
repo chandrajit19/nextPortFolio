@@ -1,26 +1,169 @@
+
 @import "tailwindcss";
 
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Root Variables - Dark mode support add kiya */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-poppins: 'Poppins', var(--font-inter);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
+
+  --brand-color: #0ea5e9; 
+  --text-color: #111827;
+  --bg-color: #ffffff;
+  --accent-color: #3b82f6;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+
+  color-scheme: light; /* Default light */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Dark Mode Variables */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --text-color: #f3f4f6;
+    --bg-color: #1f2937;
+    --brand-color: #38bdf8;
+    --accent-color: #60a5fa;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color-scheme: dark;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+html, body {
+  height: 100%;
+  font-family: var(--font-sans);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  -webkit-font-smoothing: antialiased;       /*^ fonts ko screen pe smooth aur clear dikhane ke liye*/
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  position: relative;
+  font-size: 16px; 
+}
+
+/* Headings - Responsive sizes added (mobile  adjust) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+h1 { font-size: 2.5rem; line-height: 1.1; }
+h2 { font-size: 2rem; line-height: 1.15; }
+h3 { font-size: 1.5rem; line-height: 1.2; }
+h4 { font-size: 1.25rem; line-height: 1.25; }
+h5 { font-size: 1.125rem; line-height: 1.3; }
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+}
+
+/* Paragraphs - for Better readability */
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  max-width: 65ch; /*  Line length limit for readability */
+}
+
+
+::selection {
+  background: var(--brand-color);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+
+/* Focus for accessibility */
+:focus-visible {
+  outline: 2px solid var(--brand-color);
+  outline-offset: 2px;
+}
+
+/* here custom designing */
+.my-name{font-variant: small-caps; font-family:cursive;  padding: 3px 6px; border-radius: 7px;}
+.nav-link{
+  border: none;
+  border-radius: 5px;
+  transition: all .3s;
+  scale: .89999999;
+
+}
+a:hover{
+       /* box-shadow: 1px 5px 100px 8px greenyellow; */
+       scale: 1;
+}
+.humburger{
+  transition: all 1s ease-in;
+}
+.my-pic{
+  box-shadow: 1px 2px 100px 10px greenyellow;
+}
+.social-link li{
+  transition: all .4s;
+}
+.social-link li:hover{
+  translate: 70% 0;
+  /* scale: 1.1; */
+}
+
+.card{
+  box-shadow: 1px 2px 10px gray;
+}
+
+
+/* Swiper Navigation Buttons Styles */
+.swiper-button-next,
+.swiper-button-prev {
+  color: black !important; 
+  --swiper-navigation-size: 44px; 
+  background-color: greenyellow; /* Semi-transparent bg for visibility */
+  border-radius: 50%; 
+  padding: 10px; 
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(68, 67, 67, 0.564); 
+}
+
+
+/* Vertical Center (top-bottom center) */
+.swiper {
+  position: relative;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  top: 50%; /* Top-bottom se center */
+  transform: translateY(-50%);
+}
+
+@media (width>=768px) {
+
+}
+
+
+.animate-ripple {
+  animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(4); opacity: 0; }
 }
