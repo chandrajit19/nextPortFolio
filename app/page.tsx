@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-
+// Resume PDF is served from the public directory
+const resume = '/chandrajit.pdf';
 export const metadata: Metadata = {
   title: 'Chandrajit - Frontend Developer', 
   description: 'Chandrajit - Frontend Developer Portfolio | Varanasi, India',
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
 import Image from 'next/image';
 import pic from './../public/myPic.webp'
 import LatestProjects from './_components/LatestProjects';
+import Link from 'next/link';
  const HeroSection=()=> {
   return (
     <section className="bg-bg-color pt-16 md:pt-24"> 
@@ -38,18 +40,18 @@ import LatestProjects from './_components/LatestProjects';
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
-                href="#projects"
+                href={resume}
                 className="px-6 py-3 bg-brand-color text-white rounded-lg hover:bg-accent-color transition font-medium"
                 download
               >
                 Resume
               </a>
-              <a
-                href="#contact"
+              <Link
+                href={'/contact'}
                 className="px-6 py-3 bg-transparent border border-green-300 rounded-lg hover:bg-brand-color hover:text-white transition font-medium"
               >
                 Contact Me
-              </a>
+              </Link>
             </div>
           </div>
         </div>
