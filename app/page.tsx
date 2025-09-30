@@ -57,7 +57,7 @@ import LatestProjects from './_components/LatestProjects';
 
 
       {/*Latest projects here... */}
-      <LatestProjects />
+      <LatestProjects/>
 
   
     </section>

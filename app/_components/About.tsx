@@ -4,7 +4,7 @@ import {
 } from "@heroicons/react/24/outline";
 const  About=()=> {
   return (
-    <section id="about" className="py:5 md:py-16 bg-bg-color min-h-full">
+    <section id="about" className="pt:5 pb-9 md:py-16 bg-bg-color min-h-full">
       <div className="container mx-auto px-4 md:px-25 xl:px-30">
         <h2 className="text-3xl md:text-4xl font-heading mb-12 pb-2 text-text-color border-b-2  border-b-emerald-600 inline-block">
           About Me

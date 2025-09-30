@@ -9,7 +9,7 @@ import { projects } from '../../data/projects';
 const  LatestProjects=()=> {
   return (
     <section className="pt-12">
-      <div className="container mx-auto px-4 md:px-25 xl:px-30 pb-7">
+      <div className="container mx-auto px-4 md:px-25 xl:px-30 pb-15">
         <h2 className="text-3xl font-heading  pb-2 text-text-color border-b-2 border-b-emerald-600 inline-block">Latest Projects</h2>
         <div className="relative mt-2">
           <Swiper

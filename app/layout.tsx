@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
              <Footer />
              {/* aside social link */}
                 <aside className='fixed top-[50%] left-0 translate-y-[-50%] translate-x-[-70%]'>
-                  <ul className='flex flex-col gap-2 social-link'>
+                  <ul className='flex flex-col gap-2 social-link z-100'>
                     <li>
                       <Link href="https://www.linkedin.com/in/chandra98/" target="_blank"  className='flex gap-1'>
                        <span className='min-w-[100px] text-center'> LinkedIn</span>
