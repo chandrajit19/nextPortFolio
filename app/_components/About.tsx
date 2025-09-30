@@ -2,6 +2,8 @@
 import {
   AcademicCapIcon,
 } from "@heroicons/react/24/outline";
+import Link from "next/link";
+const resume = '/chandrajit.pdf';
 const  About=()=> {
   return (
     <section id="about" className="pt:5 pb-9 md:py-16 bg-bg-color min-h-full">
@@ -30,14 +32,14 @@ const  About=()=> {
               effectively to dynamic teams.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a
-                href="#contact"
+              <Link
+                href={"/contact"}
                 className="px-6 py-3 bg-black/35 text-white rounded-lg hover:bg-accent-color transition font-medium"
               >
                 Get in Touch
-              </a>
+              </Link>
               <a
-                href="/resume.pdf"
+                href={resume}
                 download
                 className="px-6 py-3 bg-transparent border  border-green-300 text-brand-color rounded-lg hover:bg-brand-color hover:text-white transition font-medium"
               >
