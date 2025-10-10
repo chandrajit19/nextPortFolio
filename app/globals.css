@@ -5,7 +5,7 @@
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-/* Root Variables - Dark mode support add kiya */
+/* Root Variables - Dark mode support added */
 :root {
   --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-poppins: 'Poppins', var(--font-inter);
@@ -13,7 +13,7 @@
   --font-heading: var(--font-poppins);
 
   --brand-color: #0ea5e9; 
-  --text-color: #111827;
+  --text-color: #fcfcfc;
   --bg-color: #ffffff;
   --accent-color: #3b82f6;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
