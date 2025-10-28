@@ -28,7 +28,7 @@ const Navbar=()=> {
           </Link>
 
           {/* Right: Links (Desktop) */}
-          <div className="hidden md:flex text-white lg:gap-4 bg-black py-5 md:ps-5">
+          <div className="hidden md:flex text-white lg:gap-4 bg-black py-5 md:ps-5 shadow-2xl shadow-black-400">
                {
                   links.map((link) => (
                   <Link

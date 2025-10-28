@@ -1,14 +1,50 @@
 import type { Metadata } from 'next';
+import pic from '../public/myPic.webp'
+import Image from 'next/image';
+// import pic from './../public/myPic.webp'
+import LatestProjects from './_components/LatestProjects';
+import Link from 'next/link';
 // Resume PDF is served from the public directory
 const resume = '/chandrajit.pdf';
 export const metadata: Metadata = {
-  title: 'Chandrajit - Frontend Developer', 
-  description: 'Chandrajit - Frontend Developer Portfolio | Varanasi, India',
+  title: 'Chandrajit Patel - Frontend Developer Portfolio | Varanasi, India',
+  description: 'Chandrajit Patel - Experienced Frontend Developer based in Varanasi, India. Specializing in React, Next.js, Tailwind CSS, and modern web technologies. Explore my portfolio, projects, and contact for collaborations.',
+  keywords: 'Chandrajit Patel, Chandrajit, Frontend Developer, React Developer, Next.js, Varanasi Developer, Web Portfolio',
+  openGraph: {
+    title: 'Chandrajit Patel - Frontend Developer',
+    description: 'Chandrajit Patel\'s portfolio showcasing frontend development expertise in Varanasi, India.',
+    url: 'https://chandrajit.space', // Apni site ka URL daalo
+    siteName: 'Chandrajit Patel Portfolio',
+    images: [
+      {
+        url: `${pic}`, // Ek og image banao (apna photo with name)
+        width: 1200,
+        height: 630,
+        alt: 'Chandrajit Patel - Frontend Developer',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chandrajit Patel - Frontend Developer',
+    description: 'Chandrajit Patel\'s frontend development portfolio from Varanasi, India.',
+    images: [`${pic}`], // Twitter ke liye image
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
-import Image from 'next/image';
-import pic from './../public/myPic.webp'
-import LatestProjects from './_components/LatestProjects';
-import Link from 'next/link';
+
  const HeroSection=()=> {
   return (
     <section className="bg-bg-color pt-16 md:pt-24"> 
@@ -20,9 +56,9 @@ import Link from 'next/link';
               <Image
                 src={pic} 
                 alt="Chandrajit Profile Photo"
-                fill
                 className="object-cover"
-                loading='lazy'
+                width="400"
+                priority
               />
             </div>
           </div>
