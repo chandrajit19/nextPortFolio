@@ -31,18 +31,9 @@ export const projects: Project[] = [
     link1: 'https://weatherappnextjsfullweb.netlify.app/',
     link2: 'https://github.com/chandrajit19/nextJsWeatherAapp'
   },
+
   {
     id: 'project-3',
-    name: 'Rest-API for CRUD',
-    image: '/api.webp',
-    brief: 'A Rest-API build for CRUD operation.',
-    details: 'NinjaTech API is a free, educational RESTful API designed for students and developers to perform full CRUD (Create, Read, Update, Delete) operations on user records, accessible at https://ninjatech.space/api/users. Built with Next.js and Supabase, leveraging a single shared PostgreSQL table for efficient user data management (storing ID, name, age, and country for all users). This optimized design simplifies database operations while maintaining scalability. The API supports JSON-based requests/responses and integrates seamlessly with tools like Postman or fetch API.',
-    technologies: ['Next.js', 'Tailwind CSS', 'Supabase for PostgreSQL database'],
-    link1: 'https://ninjatech.space/',
-    link2: 'https://github.com/chandrajit19/api-building'
-  },
-  {
-    id: 'project-4',
     name: 'Figma to Bootstrap',
     image: '/delish.webp',
     brief: 'A Figma design converted to Bootstrap and CSS.',
@@ -51,8 +42,10 @@ export const projects: Project[] = [
     link1: 'https://chandrajit19.github.io/Delish/',
     link2: 'https://github.com/chandrajit19/Delish'
   },
+
+
   {
-    id: 'project-5',
+    id: 'project-4',
     name: 'PSD to HTML & CSS',
     image: '/coronaa.webp',
     brief: 'PSD converted to HTML and Custom CSS.',
@@ -62,7 +55,7 @@ export const projects: Project[] = [
     link2: 'https://github.com/chandrajit19/CORONA'
   },
   {
-    id: 'project-6',
+    id: 'project-5',
     name: 'PSD to HTML & CSS',
     image: '/idoo.webp',
     brief: 'PSD converted to HTML and Custom CSS.',
@@ -70,6 +63,17 @@ export const projects: Project[] = [
     technologies: ['HTML', 'CSS', 'JQuery'],
     link1: 'https://chandrajit19.github.io/IDDO/',
     link2: 'https://github.com/chandrajit19/IDDO'
+  },
+
+    {
+    id: 'project-6',
+    name: 'Rest-API for CRUD',
+    image: '/api.webp',
+    brief: 'A Rest-API build for CRUD operation.',
+    details: 'NinjaTech API is a free, educational RESTful API designed for students and developers to perform full CRUD (Create, Read, Update, Delete) operations on user records, accessible at https://ninjatech.space/api/users. Built with Next.js and Supabase, leveraging a single shared PostgreSQL table for efficient user data management (storing ID, name, age, and country for all users). This optimized design simplifies database operations while maintaining scalability. The API supports JSON-based requests/responses and integrates seamlessly with tools like Postman or fetch API.',
+    technologies: ['Next.js', 'Tailwind CSS', 'Supabase for PostgreSQL database'],
+    link1: 'https://ninjatech.space/',
+    link2: 'https://github.com/chandrajit19/api-building'
   },
   {
     id: 'project-7',

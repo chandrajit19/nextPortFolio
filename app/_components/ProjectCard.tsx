@@ -15,6 +15,7 @@ const  ProjectCard=({ id, name, image, brief, link1, link2 }: ProjectCardProps) 
   return (
     <div className=" rounded-lg  overflow-hidden group">
       <div className='p-1 bg-white rounded-b-3xl rounded-t-xl  md:blur-[.5px]  duration-300blur-sm  brightness-75 group-hover:blur-none group-hover:bg-transparent group-hover:brightness-100 group-hover:scale-102 transition-all duration-500'>
+       <Link href={`${link1}`} target='_blank'>
         <Image
         src={image}
         alt={name}
@@ -23,6 +24,7 @@ const  ProjectCard=({ id, name, image, brief, link1, link2 }: ProjectCardProps) 
         className="w-full h-auto object-cover rounded-b-4xl"
         loading="lazy"
       />
+      </Link>
       </div>
 
       <div className="p-4 bg-black/90 relative rounded-t-4xl  border-4 border-t-black border-b-black rounded-b-3xl">

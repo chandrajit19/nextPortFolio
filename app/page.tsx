@@ -39,13 +39,13 @@ import Link from 'next/link';
           Passionate frontend developer skilled in building responsive web applications using React, Next.js, Tailwind CSS, and SCSS. Experienced in full-stack features with Next.js, including e-commerce sites with custom APIs, PostgreSQL via Supabase, and Clerk authentication. Specializing in creating pixel-perfect UIs with a focus on performance and user experience. Eager to contribute to innovative projects in a dynamic team environment as a fresher.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a
+              <Link
                 href={resume}
-                className="px-6 py-3 bg-brand-color text-white rounded-lg hover:bg-accent-color transition font-medium"
+                className="px-6 py-3  text-white rounded-lg hover:bg-accent-color transition font-medium border-b-4 border-green-500"
                 download
               >
                 Resume
-              </a>
+              </Link>
               <Link
                 href={'/contact'}
                 className="px-6 py-3 bg-transparent border border-green-300 rounded-lg hover:bg-brand-color hover:text-white transition font-medium"
