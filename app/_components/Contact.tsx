@@ -1,7 +1,7 @@
 'use client';
 import { useActionState, useEffect, useState } from 'react';
 import Image from 'next/image';
-import getin from '/public/getintouch.webp'
+// import getin from './public/getintouch.webp'
 import Script from 'next/script';
 import { saveData } from '../serverFunction';
 import Swal from 'sweetalert2';
@@ -107,7 +107,7 @@ const Contact = () => {
           {/* Right Side: Image */}
           <div className="lg:w-1/2 flex justify-center lg:justify-end">
             <Image
-              src={getin} // Replace with your public image path
+              src='getintouch.webp' // Replace with your public image path
               alt="Contact Illustration"
               width={500}
               height={400}
