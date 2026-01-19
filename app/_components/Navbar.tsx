@@ -20,21 +20,21 @@ const Navbar=()=> {
 
   return (
     <header className="sticky top-0 z-50">
-      <nav className="container mx-auto px-4 bg-black md:bg-transparent"> 
-        <div className="flex justify-between items-center">
+      <nav className="container mx-auto px-2 bg-black md:bg-transparent"> 
+        <div className="flex justify-between items-center p-0">
           {/* Left: Name */}
-          <Link href="/" className="lg:text-2xl font-bold text-brand-color my-name min-w-max">
+          <Link href="/" className="lg:text-2xl font-bold text-brand-color  my-name min-w-max">
            <span>{`{ }`}</span> Chandrajit
           </Link>
 
           {/* Right: Links (Desktop) */}
-          <div className="hidden md:flex text-white lg:gap-4 bg-black py-5 md:ps-5 shadow-2xl shadow-black-400">
+          <div className="hidden md:flex text-white  lg:gap-8 bg-black py-5 md:ps-24 shadow-2xl shadow-black-400">
                {
                   links.map((link) => (
                   <Link
                      key={link.name}
                      href={link.href}
-                     className="text-lg hover:text-brand-color flex items-center justify-center font-medium nav-link md:px-1"
+                     className=" hover:text-brand-color sub-headings fw-bolder flex items-center justify-center nav-link md:px-1"
                   > 
                     {link.icon}
                     {link.name}

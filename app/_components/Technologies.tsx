@@ -7,14 +7,15 @@ import {
   SiTypescript,
   SiReact,
   SiNextdotjs,
-  SiTailwindcss,
+  SiTailwindcss,  
   SiBootstrap,
   SiJquery,
   SiSass,
   SiGithub,
+  SiNodedotjs  // <-- Changed from SiNode
 } from 'react-icons/si';
 
-const Technologies=()=> {
+const Technologies = () => {
   const techStacks = [
     { name: 'HTML', icon: <SiHtml5 className="text-orange-500" />, shadowClass: 'shadow-orange-500/80' },
     { name: 'CSS', icon: <SiCss3 className="text-blue-500" />, shadowClass: 'shadow-blue-500/80' },
@@ -27,13 +28,14 @@ const Technologies=()=> {
     { name: 'jQuery', icon: <SiJquery className="text-blue-700" />, shadowClass: 'shadow-blue-700/80' },
     { name: 'Sass', icon: <SiSass className="text-pink-500" />, shadowClass: 'shadow-pink-500/80' },
     { name: 'GitHub', icon: <SiGithub className="text-black" />, shadowClass: 'shadow-black/80' },
+    { name: 'Node.js', icon: <SiNodedotjs className="text-green-600" />, shadowClass: 'shadow-green-600/80' },  // <-- Changed from SiNode
   ];
 
   return (
     <section id="technologies" className="py-5 md:py-16  text-white relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-25 xl:px-30 pb-7 mb-5">
-        <h2 className="text-3xl md:text-4xl font-heading mb-12 border-b-2 pb-2 border-b-emerald-600 inline-block text-white">Tech Stack</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-10">
+        <h2 className="text-3xl md:text-4xl font-heading mb-12 border-b-2 pb-2 border-b-emerald-600 inline-block text-white all-headings">Tech Stack</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-4 ">
           {techStacks.map((tech) => (
             <div
               key={tech.name}
@@ -51,4 +53,4 @@ const Technologies=()=> {
     </section>
   );
 }
-export default Technologies; 
+export default Technologies;

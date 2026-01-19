@@ -1,0 +1,24 @@
+# Robots.txt for Chandrajit Patel Portfolio
+# This file helps search engines crawl and index your website efficiently
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.next/
+Disallow: /node_modules/
+
+# Crawl delay (in seconds) for all bots
+Crawl-delay: 1
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://chandrajit.space/sitemap.xml

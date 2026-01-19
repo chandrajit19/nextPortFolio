@@ -35,7 +35,7 @@ const Contact = () => {
   return (
     <section id="contact" className="pt-5 pb-9 md:py-16  text-white relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-13 md:px-25 xl:px-30 pb-7">
-        <h2 className="text-3xl md:text-4xl font-heading pb-2 border-b-2 border-b-emerald-600 inline-block">Get in Touch</h2>
+        <h2 className="text-3xl md:text-4xl font-heading pb-2 border-b-2 border-b-emerald-600 inline-block all-headings">Get in Touch</h2>
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 mt-5 items-stretch">
           {/* Left Side: Form - Unique Design with Asymmetrical Glow and Animated Fields */}
           <div className="lg:w-1/2 relative p-8 bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border  border-green-300  transition-transform duration-500">
@@ -88,14 +88,14 @@ const Contact = () => {
               <div className="flex gap-4 z-20">
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-brand-color text-white rounded-lg hover:bg-accent-color transition font-medium relative overflow-hidden z-20 cursor-pointer"
+                  className="px-6 py-3 bg-brand-color text-white hover:bg-accent-color transition font-medium relative overflow-hidden z-20 cursor-pointer border-b-4 border-green-500 rounded-lg active:scale-[.9]"
                 >
                   Submit
                   <span className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 100%) animate-ripple pointer-events-none"></span>
                 </button>
                 <button
                   type="reset"
-                  className="px-6 py-3 bg-gray-700 text-brand-color border  border-green-300 rounded-lg hover:bg-brand-color hover:text-white transition font-medium relative overflow-hidden z-20  cursor-pointer"
+                  className="px-6 py-3 bg-gray-700 text-brand-color border  border-green-300 rounded-lg hover:bg-brand-color hover:text-white transition font-medium relative overflow-hidden z-20  cursor-pointer active:scale-[.9]"
                 >
                   Reset
                   <span className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 100%) animate-ripple pointer-events-none"></span>
@@ -112,6 +112,7 @@ const Contact = () => {
               width={500}
               height={400}
               className="w-[100%] xl:w-[80%]  h-auto object-cover  lg:my-12  rounded-3xl"
+              priority
             />
           </div>
         </div>

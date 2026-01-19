@@ -1,17 +1,18 @@
-"use client"
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import ProjectCard from './ProjectCard';
-import { projects } from '../../data/projects';
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import ProjectCard from "./ProjectCard";
+import { RealProjects } from "../../data/realprojects";
 
-const  LatestProjects=()=> {
+const RealClientProjects = ()=>{
+
   return (
-    <section className="">
+    <section className="pt-12">
       <div className="container mx-auto px-4 md:px-25 xl:px-30 pb-15">
-        <h2 className="text-3xl font-heading  pb-2 text-text-color border-b-2 border-b-emerald-600 inline-block all-headings">Personal & Learning Projects</h2>
-        <div className="relative mt-2 latest-projects-carousel">
+        <h2 className="text-3xl font-heading  pb-2 text-text-color border-b-2 border-b-emerald-600 inline-block all-headings">Real-World Client Projects</h2>
+        <div className="relative mt-2 real-projects-carousel">
           <Swiper
             modules={[Navigation]}
             spaceBetween={16}
@@ -22,13 +23,13 @@ const  LatestProjects=()=> {
               1024: { slidesPerView: 3 },
             }}
             navigation={{ 
-              nextEl: '.latest-projects-carousel .swiper-button-next',
-              prevEl: '.latest-projects-carousel .swiper-button-prev',
+              nextEl: '.real-projects-carousel .swiper-button-next',
+              prevEl: '.real-projects-carousel .swiper-button-prev',
             }}
             loop
             className="pb-10"
           >
-            {projects.map((project) => (
+            {RealProjects.map((project) => (
               <SwiperSlide key={project.id}>
                 <ProjectCard {...project} />
               </SwiperSlide>
@@ -42,4 +43,5 @@ const  LatestProjects=()=> {
     </section>
   );
 }
-export default LatestProjects;
+
+export default RealClientProjects;
